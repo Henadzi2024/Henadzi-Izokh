@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блог - Henadzi Izokh</title>
     <style>
-   <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Официальный сайт Henadzi Izokh</title>
-    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #e1e5f2; /* изменённый цвет для отличия от сайта церкви */
@@ -19,21 +13,22 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #99bbff; /* изменённый цвет для отличия */
+        header, footer {
+            background-color: #99bbff;
             padding: 1em 0;
             text-align: center;
+            color: white;
         }
         h1 {
             color: #333;
             font-size: 2em;
             margin: 0;
         }
-        nav {
-            margin-top: 1em;
+        nav, .back-link {
             text-align: center;
+            margin: 20px;
         }
-        nav a {
+        nav a, .back-link a {
             margin: 0 10px;
             text-decoration: none;
             color: #333;
@@ -42,7 +37,7 @@
             background-color: #ffffff;
             border-radius: 5px;
         }
-        nav a:hover {
+        nav a:hover, .back-link a:hover {
             background-color: #99bbff;
             color: #fff;
         }
@@ -91,10 +86,12 @@
 <body>
     <header>
         <h1>Блог</h1>
-     
     </header>
 
-    <div class="container">
+    <div class="content">
+        <img src="images/VK.jpg" alt="Места хватит всем">
+        <p class="img-description">Места хватит всем</p>
+
         <h2>Записи блога</h2>
         <div class="blog-post">
             <h3>Название первой записи</h3>
@@ -104,8 +101,33 @@
         </div>
     </div>
 
+    <!-- Кнопка "На главную" -->
+    <div class="back-link">
+        <a href="index.html">На Главную</a>
+    </div>
+
+    <!-- Стрелка "Вверх" -->
+    <div id="back-to-top" onclick="scrollToTop()">↑</div>
+
     <footer>
         <p>&copy; 2024 Henadzi Izokh</p>
     </footer>
+
+    <script>
+        // Показ кнопки "Вверх" при прокрутке страницы
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Прокрутка страницы наверх
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
