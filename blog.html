@@ -71,11 +71,24 @@
         .poem {
             font-size: 1.1em;
             text-align: center;
-            white-space: pre-line;
             margin: 20px;
             line-height: 1.6;
             color: #333;
             font-style: italic;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .poem hr {
+            border: 0;
+            height: 1px;
+            background-color: #333;
+            margin: 10px auto;
+            width: 80%;
+        }
+        .poem p {
+            margin: 10px 0;
+            line-height: 1.4;
         }
         /* Стрелка вверх */
         #back-to-top {
@@ -115,6 +128,7 @@
         <!-- Новый раздел со стихом -->
         <h2 class="poem-title">Первое впечатление от французской "свободы"</h2>
         <div class="poem">
+            <hr>
             <p>Страна вольнодумцев, а значит людей непокорных,<br>
             Кровью заливших себя в псевдорелигиозных войнах...<br>
             Их жертвы напрасны и Бог в них совсем не нуждался.<br>
@@ -154,10 +168,11 @@
             Подставляешь всех под Божий смертный приговор!<br>
             Сама погибнешь и других погубишь своим упорством!<br>
             О! Где благоразумье? Где благоговенье? Где смиренье?</p>
+            <hr>
         </div>
 
         <!-- Кнопка "Читать далее" после стиха -->
-        <div class="blog-post">
+        <div class="blog-post" style="text-align: center;">
             <a href="ссылка_на_полный_текст.html">Читать далее</a>
         </div>
     </div>
