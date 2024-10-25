@@ -61,28 +61,23 @@
             padding: 1em;
             color: #333;
         }
-        /* Кнопка и стрелка */
-        .btn, #back-to-top {
+        /* Стрелка вверх */
+        #back-to-top {
             background-color: #99bbff;
             color: white;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 50%;
             border: none;
-            cursor: pointer;
-            text-align: center;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .btn:hover, #back-to-top:hover {
-            background-color: #4a78c2;
-        }
-        #back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
             font-size: 18px;
             display: none;
-            border-radius: 50%;
+            cursor: pointer;
+            text-align: center;
+        }
+        #back-to-top:hover {
+            background-color: #4a78c2;
         }
     </style>
 </head>
@@ -98,7 +93,6 @@
     </header>
 
     <div class="content">
-        <a href="index.html" class="btn">На Главную</a> <!-- Кнопка "На главную" вверху -->
         <img src="Henadzi-Izokh/images/Lev-Hen.jpg" alt="Я и Отец одно">
         <img src="Henadzi-Izokh/images/rukopolozhenie.jpg" alt="Рукоположение">
         <img src="Henadzi-Izokh/images/ya-kafedra-vertikalj.jpg" alt="Я у кафедры">
@@ -108,7 +102,7 @@
         <p>Добро пожаловать! Вы благословенны! Просто так сюда не заходят. У Отца для нас грандиозные планы.</p>
     </div>
 
-    <!-- Кнопка "Вверх" -->
+    <!-- Стрелка "Вверх" -->
     <div id="back-to-top" onclick="scrollToTop()">↑</div>
 
     <script>
