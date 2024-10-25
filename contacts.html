@@ -5,21 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Henadzi Izokh</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f2f2f2; color: #333; }
-        header { background-color: #ffcc33; color: #fff; text-align: center; padding: 1em 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        footer { background-color: #ffcc33; color: #fff; text-align: center; padding: 1em 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1e5f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #99bbff;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        .back-link a:hover {
+            background-color: #99bbff;
+            color: #fff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #4a78c2;
+        }
+        /* Стрелка вверх */
+        #back-to-top {
+            background-color: #99bbff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            border: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        #back-to-top:hover {
+            background-color: #4a78c2;
+        }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Контакты</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="about.html">Обо мне</a>
-            <a href="blog.html">Блог</a>
-        </nav>
+        <!-- Кнопка "На главную" в верхней части -->
+        <div class="back-link">
+            <a href="index.html">На Главную</a>
+        </div>
     </header>
 
     <div class="container">
@@ -28,10 +94,32 @@
         <p>Адрес: Les Lilas, Франция</p>
         <p>YouTube: <a href="http://www.youtube.com/@izokhhenadzi746" target="_blank">Мой YouTube-канал</a></p>
         <p>Церковный YouTube-канал: <a href="https://www.youtube.com/@user-ui1cf2gs2b" target="_blank">Церковь "Люди Истины"</a></p>
+        <p>Сайт церкви: <a href="https://henadzi2024.github.io/tserkov-ludi-istiny/" target="_blank">Церковь "Люди Истины"</a></p>
     </div>
+
+    <!-- Стрелка "Вверх" -->
+    <div id="back-to-top" onclick="scrollToTop()">↑</div>
 
     <footer>
         <p>&copy; 2024 Henadzi Izokh</p>
     </footer>
+
+    <script>
+        // Показ кнопки "Вверх" при прокрутке страницы
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Прокрутка страницы наверх
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
 </body>
 </html>
