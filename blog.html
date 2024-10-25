@@ -5,22 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блог - Henadzi Izokh</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f2f2f2; color: #333; }
-        header, footer { background-color: #ffcc33; color: #fff; text-align: center; padding: 1em 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+   <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Официальный сайт Henadzi Izokh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1e5f2; /* изменённый цвет для отличия от сайта церкви */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #99bbff; /* изменённый цвет для отличия */
+            padding: 1em 0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0;
+        }
+        nav {
+            margin-top: 1em;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #99bbff;
+            color: #fff;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .content img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .content p {
+            font-size: 1.1em;
+            text-align: justify;
+            padding: 1em;
+            color: #333;
+        }
+        /* Стрелка вверх */
+        #back-to-top {
+            background-color: #99bbff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            border: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        #back-to-top:hover {
+            background-color: #4a78c2;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Блог</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="about.html">Обо мне</a>
-            <a href="experience.html">Опыт и проекты</a>
-            <a href="skills.html">Навыки</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
+     
     </header>
 
     <div class="container">
