@@ -6,14 +6,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #e1e5f2; /* изменённый цвет для отличия от сайта церкви */
             color: #333;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #ffcc33;
+            background-color: #99bbff; /* изменённый цвет для отличия */
             padding: 1em 0;
             text-align: center;
         }
@@ -36,7 +36,7 @@
             border-radius: 5px;
         }
         nav a:hover {
-            background-color: #ffcc33;
+            background-color: #99bbff;
             color: #fff;
         }
         .content {
@@ -48,11 +48,41 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
+        .content img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
         .content p {
             font-size: 1.1em;
             text-align: justify;
             padding: 1em;
             color: #333;
+        }
+        /* Кнопка и стрелка */
+        .btn, #back-to-top {
+            background-color: #99bbff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn:hover, #back-to-top:hover {
+            background-color: #4a78c2;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 18px;
+            display: none;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -66,11 +96,37 @@
             <a href="contacts.html">Контакты</a>
         </nav>
     </header>
+
     <div class="content">
-       <img src="https://github.com/Henadzi-Izokh/images/Lev-Hen.jpg?raw=true" alt="Я и Отец одно">
+        <a href="index.html" class="btn">На Главную</a> <!-- Кнопка "На главную" вверху -->
+        <img src="Henadzi-Izokh/images/Lev-Hen.jpg" alt="Я и Отец одно">
+        <img src="Henadzi-Izokh/images/rukopolozhenie.jpg" alt="Рукоположение">
+        <img src="Henadzi-Izokh/images/ya-kafedra-vertikalj.jpg" alt="Я у кафедры">
+        <img src="Henadzi-Izokh/images/mi.jpg" alt="Мы">
+        <img src="Henadzi-Izokh/images/Hristos-Voskres.jpg" alt="Христос Воскрес">
 
         <p>Добро пожаловать! Вы благословенны! Просто так сюда не заходят. У Отца для нас грандиозные планы.</p>
     </div>
+
+    <!-- Кнопка "Вверх" -->
+    <div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        // Показ кнопки "Вверх" при прокрутке страницы
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Прокрутка страницы наверх
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
 </body>
 </html>
-
